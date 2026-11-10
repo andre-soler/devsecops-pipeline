@@ -1,0 +1,7 @@
+# Checks skipped for this lab environment, with justification.
+# In production these WOULD be enforced.
+skip-check:
+  - CKV_K8S_43   # image digest — lab uses local kind images by tag
+  - CKV2_K8S_6   # NetworkPolicy — single-app lab cluster
+  - CKV_K8S_38   # service account token — not used in this lab
+soft-fail: false

@@ -45,6 +45,7 @@ jobs:
         uses: bridgecrewio/checkov-action@45edc9d8856b664db2ec251f5f8632361f0a67aa # v12
         with:
           directory: .
+          config_file: .checkov.yaml
           soft_fail: false
 
   secrets:
