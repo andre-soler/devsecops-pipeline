@@ -1,0 +1,5 @@
+bin/
+obj/
+*.key
+cosign.key
+.env
