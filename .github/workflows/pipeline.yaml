@@ -9,15 +9,15 @@ permissions:
   contents: read
 
 jobs:
-  sast:
+     sast:
     name: Code scanning (Semgrep)
     runs-on: ubuntu-latest
+    container:
+      image: semgrep/semgrep
     steps:
       - uses: actions/checkout@v4
       - name: Run Semgrep
-        uses: semgrep/semgrep-action@v1
-        with:
-          config: p/default
+        run: semgrep scan --config p/default --error
 
   dependencies:
     name: Dependency scanning
