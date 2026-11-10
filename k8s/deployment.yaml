@@ -19,6 +19,10 @@ spec:
         app: taskflow-api
     spec:
       automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        seccompProfile:
+          type: RuntimeDefault
       containers:
         - name: taskflow-api
           image: taskflow-api:v1
