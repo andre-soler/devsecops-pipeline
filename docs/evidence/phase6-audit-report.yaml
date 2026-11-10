@@ -1,0 +1,169 @@
+apiVersion: v1
+items:
+- apiVersion: wgpolicyk8s.io/v1alpha2
+  kind: PolicyReport
+  metadata:
+    creationTimestamp: "2026-11-10T16:23:07Z"
+    generation: 3
+    labels:
+      app.kubernetes.io/managed-by: kyverno
+    name: 18ac1576-10da-4077-8246-da45ba617069
+    namespace: default
+    ownerReferences:
+    - apiVersion: v1
+      kind: Pod
+      name: root-test
+      uid: 18ac1576-10da-4077-8246-da45ba617069
+    resourceVersion: "18017"
+    uid: 29ed84eb-8f51-441a-9f14-c55fff22a5b2
+  results:
+  - message: 'validation error: Pods must set spec.securityContext.runAsNonRoot to
+      true. rule run-as-non-root failed at path /spec/securityContext/runAsNonRoot/'
+    policy: require-non-root
+    properties:
+      process: background scan
+    result: fail
+    rule: run-as-non-root
+    scored: true
+    source: kyverno
+    timestamp:
+      nanos: 0
+      seconds: 1794328965
+  scope:
+    apiVersion: v1
+    kind: Pod
+    name: root-test
+    namespace: default
+    uid: 18ac1576-10da-4077-8246-da45ba617069
+  summary:
+    error: 0
+    fail: 1
+    pass: 0
+    skip: 0
+    warn: 0
+- apiVersion: wgpolicyk8s.io/v1alpha2
+  kind: PolicyReport
+  metadata:
+    creationTimestamp: "2026-11-10T16:16:27Z"
+    generation: 4
+    labels:
+      app.kubernetes.io/managed-by: kyverno
+    name: d70f3b45-a84d-4e6b-8512-488916914f55
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      kind: ReplicaSet
+      name: taskflow-api-6569f97cbb
+      uid: d70f3b45-a84d-4e6b-8512-488916914f55
+    resourceVersion: "18022"
+    uid: 76f78788-ed13-477f-b1b8-a3d94773717e
+  results:
+  - message: 'validation error: Pods must set spec.securityContext.runAsNonRoot to
+      true. rule autogen-run-as-non-root failed at path /spec/template/spec/securityContext/runAsNonRoot/'
+    policy: require-non-root
+    properties:
+      process: background scan
+    result: fail
+    rule: autogen-run-as-non-root
+    scored: true
+    source: kyverno
+    timestamp:
+      nanos: 0
+      seconds: 1794328965
+  scope:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: taskflow-api-6569f97cbb
+    namespace: default
+    uid: d70f3b45-a84d-4e6b-8512-488916914f55
+  summary:
+    error: 0
+    fail: 1
+    pass: 0
+    skip: 0
+    warn: 0
+- apiVersion: wgpolicyk8s.io/v1alpha2
+  kind: PolicyReport
+  metadata:
+    creationTimestamp: "2026-11-10T16:16:27Z"
+    generation: 4
+    labels:
+      app.kubernetes.io/managed-by: kyverno
+    name: e4cb49b8-b41d-4398-a8ae-1f25945cf40a
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: taskflow-api
+      uid: e4cb49b8-b41d-4398-a8ae-1f25945cf40a
+    resourceVersion: "18018"
+    uid: 7e277f75-65d2-443a-8d64-096dee0590f8
+  results:
+  - message: 'validation error: Pods must set spec.securityContext.runAsNonRoot to
+      true. rule autogen-run-as-non-root failed at path /spec/template/spec/securityContext/runAsNonRoot/'
+    policy: require-non-root
+    properties:
+      process: background scan
+    result: fail
+    rule: autogen-run-as-non-root
+    scored: true
+    source: kyverno
+    timestamp:
+      nanos: 0
+      seconds: 1794328965
+  scope:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: taskflow-api
+    namespace: default
+    uid: e4cb49b8-b41d-4398-a8ae-1f25945cf40a
+  summary:
+    error: 0
+    fail: 1
+    pass: 0
+    skip: 0
+    warn: 0
+- apiVersion: wgpolicyk8s.io/v1alpha2
+  kind: PolicyReport
+  metadata:
+    creationTimestamp: "2026-11-10T16:16:27Z"
+    generation: 4
+    labels:
+      app.kubernetes.io/managed-by: kyverno
+    name: fc84095a-e73d-4db8-963f-34acc9f75d18
+    namespace: default
+    ownerReferences:
+    - apiVersion: v1
+      kind: Pod
+      name: taskflow-api-6569f97cbb-5m82v
+      uid: fc84095a-e73d-4db8-963f-34acc9f75d18
+    resourceVersion: "18016"
+    uid: 40b7a19f-16b5-4d6c-92f4-9c0e78113e33
+  results:
+  - message: 'validation error: Pods must set spec.securityContext.runAsNonRoot to
+      true. rule run-as-non-root failed at path /spec/securityContext/runAsNonRoot/'
+    policy: require-non-root
+    properties:
+      process: background scan
+    result: fail
+    rule: run-as-non-root
+    scored: true
+    source: kyverno
+    timestamp:
+      nanos: 0
+      seconds: 1794328965
+  scope:
+    apiVersion: v1
+    kind: Pod
+    name: taskflow-api-6569f97cbb-5m82v
+    namespace: default
+    uid: fc84095a-e73d-4db8-963f-34acc9f75d18
+  summary:
+    error: 0
+    fail: 1
+    pass: 0
+    skip: 0
+    warn: 0
+kind: List
+metadata:
+  resourceVersion: ""

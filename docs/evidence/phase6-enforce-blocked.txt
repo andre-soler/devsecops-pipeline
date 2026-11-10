@@ -1,0 +1,6 @@
+Error from server: admission webhook "validate.kyverno.svc-fail" denied the request: 
+
+resource Pod/default/root-test was blocked due to the following policies 
+
+require-non-root:
+  run-as-non-root: 'validation error: Pods must set spec.securityContext.runAsNonRoot to true. rule run-as-non-root failed at path /spec/securityContext/runAsNonRoot/'

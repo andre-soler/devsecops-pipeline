@@ -1,0 +1,165 @@
+apiVersion: v1
+items:
+- apiVersion: wgpolicyk8s.io/v1alpha2
+  kind: PolicyReport
+  metadata:
+    creationTimestamp: "2026-11-10T16:50:05Z"
+    generation: 2
+    labels:
+      app.kubernetes.io/managed-by: kyverno
+    name: 185cb5dc-2889-4489-8115-a168d23788e0
+    namespace: taskflow
+    ownerReferences:
+    - apiVersion: v1
+      kind: Pod
+      name: taskflow-api-7b75d95d5d-m5fzm
+      uid: 185cb5dc-2889-4489-8115-a168d23788e0
+    resourceVersion: "19424"
+    uid: 870652a5-940a-45d3-a726-4ca5a9d34dd8
+  results:
+  - message: validation rule 'run-as-non-root' passed.
+    policy: require-non-root
+    properties:
+      process: background scan
+    result: pass
+    rule: run-as-non-root
+    scored: true
+    source: kyverno
+    timestamp:
+      nanos: 0
+      seconds: 1794329410
+  scope:
+    apiVersion: v1
+    kind: Pod
+    name: taskflow-api-7b75d95d5d-m5fzm
+    namespace: taskflow
+    uid: 185cb5dc-2889-4489-8115-a168d23788e0
+  summary:
+    error: 0
+    fail: 0
+    pass: 1
+    skip: 0
+    warn: 0
+- apiVersion: wgpolicyk8s.io/v1alpha2
+  kind: PolicyReport
+  metadata:
+    creationTimestamp: "2026-11-10T16:48:30Z"
+    generation: 2
+    labels:
+      app.kubernetes.io/managed-by: kyverno
+    name: 34dacf06-0eb9-4b80-a7a2-15b3058d05e0
+    namespace: taskflow
+    ownerReferences:
+    - apiVersion: apps/v1
+      kind: ReplicaSet
+      name: taskflow-api-656c4b484c
+      uid: 34dacf06-0eb9-4b80-a7a2-15b3058d05e0
+    resourceVersion: "19617"
+    uid: f3e7cf6f-ed4b-4920-9c6b-8ebe20d8b970
+  results:
+  - message: validation rule 'autogen-run-as-non-root' passed.
+    policy: require-non-root
+    properties:
+      process: background scan
+    result: pass
+    rule: autogen-run-as-non-root
+    scored: true
+    source: kyverno
+    timestamp:
+      nanos: 0
+      seconds: 1794329460
+  scope:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: taskflow-api-656c4b484c
+    namespace: taskflow
+    uid: 34dacf06-0eb9-4b80-a7a2-15b3058d05e0
+  summary:
+    error: 0
+    fail: 0
+    pass: 1
+    skip: 0
+    warn: 0
+- apiVersion: wgpolicyk8s.io/v1alpha2
+  kind: PolicyReport
+  metadata:
+    creationTimestamp: "2026-11-10T16:48:09Z"
+    generation: 4
+    labels:
+      app.kubernetes.io/managed-by: kyverno
+    name: 888f6c50-abe3-43c2-b574-b47a81d1cd61
+    namespace: taskflow
+    ownerReferences:
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: taskflow-api
+      uid: 888f6c50-abe3-43c2-b574-b47a81d1cd61
+    resourceVersion: "19422"
+    uid: d68f8dc1-5248-4280-8e85-2c878df717b8
+  results:
+  - message: validation rule 'autogen-run-as-non-root' passed.
+    policy: require-non-root
+    properties:
+      process: background scan
+    result: pass
+    rule: autogen-run-as-non-root
+    scored: true
+    source: kyverno
+    timestamp:
+      nanos: 0
+      seconds: 1794329410
+  scope:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: taskflow-api
+    namespace: taskflow
+    uid: 888f6c50-abe3-43c2-b574-b47a81d1cd61
+  summary:
+    error: 0
+    fail: 0
+    pass: 1
+    skip: 0
+    warn: 0
+- apiVersion: wgpolicyk8s.io/v1alpha2
+  kind: PolicyReport
+  metadata:
+    creationTimestamp: "2026-11-10T16:50:20Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/managed-by: kyverno
+    name: f59b9ef5-bf9c-4f48-8f36-206b4264016f
+    namespace: taskflow
+    ownerReferences:
+    - apiVersion: apps/v1
+      kind: ReplicaSet
+      name: taskflow-api-7b75d95d5d
+      uid: f59b9ef5-bf9c-4f48-8f36-206b4264016f
+    resourceVersion: "19416"
+    uid: 9d518a7c-2969-4080-9e59-e5b81defb918
+  results:
+  - message: validation rule 'autogen-run-as-non-root' passed.
+    policy: require-non-root
+    properties:
+      process: background scan
+    result: pass
+    rule: autogen-run-as-non-root
+    scored: true
+    source: kyverno
+    timestamp:
+      nanos: 0
+      seconds: 1794329410
+  scope:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: taskflow-api-7b75d95d5d
+    namespace: taskflow
+    uid: f59b9ef5-bf9c-4f48-8f36-206b4264016f
+  summary:
+    error: 0
+    fail: 0
+    pass: 1
+    skip: 0
+    warn: 0
+kind: List
+metadata:
+  resourceVersion: ""
